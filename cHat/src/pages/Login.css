@@ -1,0 +1,176 @@
+.login-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0f0f23 100%);
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.login-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.login-container::-webkit-scrollbar-thumb {
+    background: rgba(102, 126, 234, 0.3);
+    border-radius: 2px;
+}
+
+.login-container .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    animation: slideUp 0.6s ease-out;
+}
+
+.login-container .brand h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    background: rgba(30, 30, 50, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.5rem 1.25rem;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.7s ease-out 0.1s backwards;
+}
+
+.login-container input {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.login-container input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.login-container input:focus {
+    border: 1px solid rgba(102, 126, 234, 0.5);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-1px);
+}
+
+.login-container button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.login-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.login-container button:active {
+    transform: translateY(0);
+}
+
+.login-container span {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.2px;
+    margin-top: 0.25rem;
+}
+
+.login-container span a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.login-container span a:hover {
+    color: #764ba2;
+    border-bottom: 1px solid #764ba2;
+}
+
+.forgot-password-link {
+    margin-top: 0.5rem !important;
+}
+
+.forgot-password-link a {
+    color: #ffd700 !important;
+}
+
+.forgot-password-link a:hover {
+    color: #ffec8b !important;
+    border-bottom-color: #ffec8b !important;
+}
+
+@media (max-width: 380px) {
+    .login-container .brand h1 {
+        font-size: 1.75rem;
+    }
+
+    .login-container form {
+        padding: 1.25rem 1rem;
+        max-width: 100%;
+    }
+
+    .login-container input {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.85rem;
+    }
+
+    .login-container button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Animation */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

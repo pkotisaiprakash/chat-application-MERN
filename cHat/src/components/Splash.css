@@ -1,0 +1,5 @@
+.splash-root{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#9a86f3,#4f04ff);z-index:9999}
+.splash-circle{width:160px;height:160px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.4);transform:scale(0);animation:pop 1s forwards}
+.splash-icon{width:120px;height:120px;object-fit:contain}
+.splash-title{color:white;margin-top:20px;font-weight:700;letter-spacing:4px}
+@keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.05)}100%{transform:scale(1)}}

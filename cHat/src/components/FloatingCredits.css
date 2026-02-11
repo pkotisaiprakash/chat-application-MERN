@@ -1,0 +1,232 @@
+/* Floating Credits Panel - Compact and Smooth */
+.floating-panel {
+    position: fixed;
+    left: 20px;
+    top: 80px;
+    width: 200px;
+    background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 62, 0.95) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.2);
+    z-index: 999;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.floating-panel:hover {
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+}
+
+.floating-panel.dragging {
+    cursor: grabbing;
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+    transition: none;
+}
+
+/* Header - Draggable */
+.floating-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+}
+
+.floating-panel-header:active {
+    cursor: grabbing;
+}
+
+.floating-drag-icon {
+    color: #667eea;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.floating-panel-title {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    flex: 1;
+    margin: 0;
+}
+
+.floating-panel-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.floating-panel-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #667eea;
+}
+
+/* Content */
+.floating-panel-content {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Name and Title */
+.floating-panel-section {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-panel-name {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 0.15rem 0;
+}
+
+.floating-panel-role {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+/* Contact Buttons */
+.floating-panel-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.floating-contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.floating-contact-btn.email {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.floating-contact-btn.email:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.floating-contact-btn.phone {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.floating-contact-btn.phone:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+}
+
+.floating-contact-btn:active {
+    transform: scale(0.98);
+}
+
+.floating-contact-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.floating-contact-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.floating-contact-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin: 0 0 0.1rem 0;
+}
+
+.floating-contact-value {
+    font-size: 0.7rem;
+    opacity: 0.9;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Footer */
+.floating-panel-footer {
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.floating-panel-footer p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.65rem;
+    margin: 0;
+}
+
+/* Minimized State */
+.floating-panel.minimized .floating-panel-content {
+    display: none;
+}
+
+.floating-panel.minimized .floating-panel-header {
+    padding: 0.4rem 0.5rem;
+}
+
+.floating-panel.minimized .floating-drag-icon {
+    font-size: 0.9rem;
+}
+
+.floating-panel.minimized .floating-panel-title {
+    font-size: 0.8rem;
+}
+
+.floating-panel.minimized .floating-panel-toggle {
+    width: 22px;
+    height: 22px;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .floating-panel {
+        left: 10px;
+        top: 70px;
+        width: 180px;
+    }
+
+    .floating-panel-header {
+        padding: 0.4rem 0.5rem;
+    }
+
+    .floating-panel-content {
+        padding: 0.5rem;
+    }
+
+    .floating-contact-btn {
+        padding: 0.4rem 0.5rem;
+    }
+}
+
+/* Smooth drag transition */
+.floating-panel:not(.dragging) {
+    transition: left 0.1s ease-out, top 0.1s ease-out, box-shadow 0.3s ease;
+}

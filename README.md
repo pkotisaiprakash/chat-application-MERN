@@ -26,7 +26,7 @@ A real-time chat application built with the MERN stack (MongoDB, Express, React,
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/snappy-chat.git
+   git clone https://github.com/pkotisaiprakash/chat-application-MERN.git
    cd snappy-chat
    ```
 
@@ -168,6 +168,4 @@ MIT License - feel free to use this project for learning or as a starting point 
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/snappy-chat](https://github.com/yourusername/snappy-chat)
+Project Link: [https://github.com/pkotisaiprakash/chat-application-MERN](https://github.com/pkotisaiprakash/chat-application-MERN)
